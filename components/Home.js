@@ -91,25 +91,3 @@ const Home = () => {
 }
 
 export default Home
-
-/* 
-const url = `http://api.openweathermap.org/geo/1.0/direct?q=${currentCity}&limit=5&appid=025368351ab316689cc73c8b282745a0`
-    try {
-      const res = await fetch(url)
-      const data = await res.json()
-      console.log(data[0].name)
-      let city = data[0].name
-        setLatLon({
-          lat: data[0].lat,
-          lon: data[0].lon
-        })
-
-        let url2 = `https://api.openweathermap.org/data/2.5/weather?lat=${latLon.lat}&lon=${latLon.lon}&appid=025368351ab316689cc73c8b282745a0&units=metric`
-        const respone = await fetch(url2)
-        const data2 = await respone.json()
-        console.log(data2)
-        setWeather({ temp: data2.main.temp, temp_min: data2.main.temp_min, temp_max: data2.main.temp_max, feels_like: data2.main.feels_like, description: data2.weather[0].main, city_name: data2.name })
-    } catch (error) {
-        console.log(error) 
-    }
-*/
